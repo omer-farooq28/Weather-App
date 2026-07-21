@@ -78,15 +78,3 @@ Open your browser and visit:
 ```
 http://localhost:3000
 ```
-
----
-
-## Screenshots
-
-Add screenshots of your application inside the `screenshots` folder.
-
-Example:
-
-- Home Page
-- Weather Search
-- Search Results
