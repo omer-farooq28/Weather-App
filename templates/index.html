@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App ☁️</title>
+
+    <meta name="description" content="Simple Weather App using Flask and WeatherAPI">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            <i class="fa-solid fa-cloud"></i>
+            <h2>WEATHER APP</h2>
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h1>Weather App</h1>
+
+        <p>
+            Search any city to get the latest weather information.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name...">
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WEATHER ================= -->
+
+    <section class="weather-container">
+
+        <!-- Current Weather -->
+
+        <div class="current-weather">
+
+            <h2 id="cityName">
+                Hyderabad, India
+            </h2>
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon">
+
+            <h1 id="temperature">
+                30°C
+            </h1>
+
+            <h3 id="condition">
+                Clear
+            </h3>
+
+            <p id="date">
+                --
+            </p>
+
+        </div>
+
+        <!-- Weather Details -->
+
+        <div class="weather-details">
+
+            <div class="card">
+                <i class="fa-solid fa-temperature-half"></i>
+                <h4>Feels Like</h4>
+                <p id="feelsLike">--</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-droplet"></i>
+                <h4>Humidity</h4>
+                <p id="humidity">--</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-wind"></i>
+                <h4>Wind Speed</h4>
+                <p id="wind">--</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-eye"></i>
+                <h4>Visibility</h4>
+                <p id="visibility">--</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-sun"></i>
+                <h4>UV Index</h4>
+                <p id="uv">--</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-water"></i>
+                <h4>AQI (PM2.5)</h4>
+                <p id="aqi">--</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Weather App | Powered by Flask & WeatherAPI.com
+        </p>
+
+    </footer>
+
+    <!--LOADER -->
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
